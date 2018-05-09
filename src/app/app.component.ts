@@ -140,9 +140,6 @@ export class AppComponent implements OnInit, OnDestroy {
           
             if (isNew) {
               this.allBooks = [...this.allBooks, response];
-              // this.allBooks = [response, ...this.allBooks];
-              // this.booksForCurrentPage.pop();
-              // this.booksForCurrentPage = [response , ...this.booksForCurrentPage];
             } else {
               this.allBooks[response.id - 1] = response;
               this.booksForCurrentPage[response.id - 1] = response;
