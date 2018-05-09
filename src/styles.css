@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+.mat-mini-fab {
+  background-color: #8be6ff !important;
+}
+
+.mat-accent {
+  background-color: #8be6ff !important;
+}

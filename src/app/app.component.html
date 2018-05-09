@@ -1,0 +1,40 @@
+<!-- Menu -->
+<mat-toolbar class="menu-overlay header">
+  <span>Book Library</span>
+  <span class="spacer-button">
+  <button mat-icon-button [matMenuTriggerFor]="addmenu">
+    <mat-icon>toc</mat-icon>
+  </button>
+  </span>
+</mat-toolbar>
+
+<!-- Menu Options -->
+<mat-menu #addmenu>
+  <button mat-menu-item (click)="editDialog(null)">
+    <mat-icon>add</mat-icon>
+    <span>New Book</span>
+  </button>
+</mat-menu>
+
+<!-- Cotent -->
+<div class="site-content">
+
+  <!-- Books List -->
+<mat-grid-list cols="4" rowHeight="2:6">
+  <mat-grid-tile
+      *ngFor="let book of booksForCurrentPage">
+      <app-book-card (editt)="editDialog(book)" (delete)="deleteSnackbar(book)" [book]="book"></app-book-card>
+  </mat-grid-tile>
+</mat-grid-list>
+</div>
+
+
+
+<!-- Footer -->
+<mat-toolbar class="menu-overlay footer">
+  <span class="spacer">
+    <!-- Pagination -->
+    <mat-paginator class="pagination" [length]="allBooks.length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" (page)="onPaginationChanged($event)">
+    </mat-paginator>
+  </span>
+</mat-toolbar>

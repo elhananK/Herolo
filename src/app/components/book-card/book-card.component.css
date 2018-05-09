@@ -1,0 +1,24 @@
+.mat-card-avatar {
+  height: 80px;
+  border-radius: 0;
+  width: auto;
+}
+.img-book {
+  height: 350px;
+}
+.mat-expansion-panel-header-description {
+  flex-grow: 0;
+}
+
+.mat-expansion-panel {
+  margin-bottom: 5px;
+}
+.example-card {
+  max-width: 200px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
