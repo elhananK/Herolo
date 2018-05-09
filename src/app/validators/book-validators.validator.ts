@@ -47,7 +47,6 @@ export class DuplicateTitleValidatorDirective {
             const bookWithGivenTitle = books.find((book) => book.title === control.value);
     
             // if not found a book with the same title then the value is valid
-            // if (!bookWithGivenTitle || !(originalBookTitle === control.value) {
             if (!bookWithGivenTitle || originalBookTitle === control.value) {
                 return null;
             }
